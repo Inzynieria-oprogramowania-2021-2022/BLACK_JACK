@@ -1,4 +1,4 @@
-﻿
+
 #include <iostream>
 #include <stdlib.h> 
 #include <time.h> 
@@ -6,6 +6,7 @@ using namespace std;
 /*ToDo:
 1.Pasuje by była jaka pentla żeby kończyło program dopiero po kliknięciu 4
 2.Zrobić w miarę sensowną instrukcję
+3.losowanie poprawić
 */
 int LosowanieKarty() {
     srand(time(NULL));
@@ -13,12 +14,48 @@ int LosowanieKarty() {
     cout << liczba;
     return liczba;
 }
+void hit() {
+
+}
+void stand() {
+
+}
+int karty[];
+void wyswietl() {//trzeba zrobić jakby karty były więcej od 2 i do tego funckcje jakąś bo c++ jest gównem
+    cout << "Twoje Karty to:";
+    for (int i = 0; i < 2; i++) {
+        karty[i];
+        cout << ",";
+    }
+    if (suma <= 20) {
+        cout << "Do you want to draw a new card?";
+    }
+    else if (suma == 21) {
+        cout << "You've got Blackjack!";
+            //hasBlackJack = true
+    }
+    else {
+        cout << "You're out of the game!";
+            //isAlive = false
+    }
+}
+int suma;
+void RozpoczecieGry() {
+    int PierwszaKarta = LosowanieKarty();
+    cout << PierwszaKarta << "/n";
+    int DrugaKarta = LosowanieKarty();
+    cout << DrugaKarta;
+    karty[PierwszaKarta, DrugaKarta];
+    suma = PierwszaKarta + DrugaKarta;
+    wyswietl();
+}
 int punkty;
 void Menu(int x) {
     switch (x)
     {
     case 1://funkcja gry
         cout << "Rozgrywka";
+        RozpoczecieGry();
         break;
     case 2://funkcja sklepu
         cout << "Sklep";
