@@ -1,60 +1,70 @@
 
 #include <iostream>
-#include <stdlib.h> 
-#include <time.h> 
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 /*ToDo:
-1.Pasuje by była jaka pentla żeby kończyło program dopiero po kliknięciu 4
+* 1.Stand();
 2.Zrobić w miarę sensowną instrukcję
-3.losowanie poprawić
 */
+int karty[5];
+int suma;
+bool isAlive = false;
+bool BlackJack = false;
 int LosowanieKarty() {
-    srand(time(NULL));
     int liczba = (rand() % 11) + 1;
-    cout << liczba;
     return liczba;
 }
 void hit() {
-
+    int KolejnaKarta = LosowanieKarty();
+    karty[3] = KolejnaKarta;//zrobić by było i w sensie wiadomo o co mi cho
+    wyswietl();
+    
 }
 void stand() {
-
+    //Sprawdzenie czy krupier ma więcej czy nie 
 }
-int karty[];
-void wyswietl() {//trzeba zrobić jakby karty były więcej od 2 i do tego funckcje jakąś bo c++ jest gównem
+void wyswietl() {
+    int wybor;
     cout << "Twoje Karty to:";
     for (int i = 0; i < 2; i++) {
-        karty[i];
-        cout << ",";
+        cout<<karty[i]<< ","; 
     }
     if (suma <= 20) {
-        cout << "Do you want to draw a new card?";
+        cout << "\nSuma: " << suma;
+        cout << "\nDo you want to draw a new card?";
+        cout << "\n1.Tak";
+        cout << "\n1.Nie";
+        cout << "\nWybor: ";
+        cin >> wybor;
+        if (wybor == 1) hit();
+        else if (wybor == 2) stand();
+        else cout << "Jesli to widzisz to wystapił jakis problem, proszę o kontakt z supportem";
     }
     else if (suma == 21) {
-        cout << "You've got Blackjack!";
-            //hasBlackJack = true
+        cout << "\nYou've got Blackjack!";
+        BlackJack = true;
     }
     else {
-        cout << "You're out of the game!";
-            //isAlive = false
+        cout << "\nYou're out of the game!";
+        isAlive = false;
     }
 }
-int suma;
 void RozpoczecieGry() {
     int PierwszaKarta = LosowanieKarty();
-    cout << PierwszaKarta << "/n";
     int DrugaKarta = LosowanieKarty();
-    cout << DrugaKarta;
-    karty[PierwszaKarta, DrugaKarta];
+    karty[0] = PierwszaKarta;
+    karty[1] = DrugaKarta;
     suma = PierwszaKarta + DrugaKarta;
     wyswietl();
 }
+
 int punkty;
 void Menu(int x) {
     switch (x)
     {
     case 1://funkcja gry
-        cout << "Rozgrywka";
+        cout << "Rozgrywka\n";
         RozpoczecieGry();
         break;
     case 2://funkcja sklepu
@@ -95,6 +105,7 @@ void Start() {
 
 int main()
 {
+    srand(time(NULL));
     Start();
 }
 
