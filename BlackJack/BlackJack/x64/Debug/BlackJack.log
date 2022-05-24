@@ -1,3 +1,2 @@
-﻿  BlackJack.cpp
-C:\Users\rafal.chrzanowski\source\repos\BlackJack\BlackJack\BlackJack.cpp(11,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
-  BlackJack.vcxproj -> C:\Users\rafal.chrzanowski\source\repos\BlackJack\x64\Debug\BlackJack.exe
+﻿  Rozgrywka.cpp
+  BlackJack.vcxproj -> C:\Users\Piotrek\Documents\studia\Sem IV\IO\23_05\BLACK_JACK-main\BlackJack\x64\Debug\BlackJack.exe
