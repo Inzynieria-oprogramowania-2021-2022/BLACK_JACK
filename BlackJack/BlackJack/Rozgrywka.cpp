@@ -107,7 +107,7 @@ void Rozgrywka::TworzenieTalii() {
         wyswietl();
     }
     void Rozgrywka::Krupier() {
-        if (sumaKrupier <= 16) {
+        if (sumaKrupier < 17) {
             int KolejnaKarta = LosowanieKarty();
             kartyKrupiera[kartaKrupier] = KolejnaKarta;
             sumaKrupier += KolejnaKarta;
@@ -125,16 +125,21 @@ void Rozgrywka::TworzenieTalii() {
             R.RozpoczecieGry();
             break;
         case 2://funkcja sklepu
-            cout << "Sklep";
+            cout << "Sklep\n";
+            Sklep S;
+            S.Zakupy();
             break;
         case 3://support
-            cout << "Suport";
+            cout << "Suport\n"
+            << "W celu skonslutowania sie z obsluga prosze pisac na adres barasinski@student.agh.edu.pl\n";
+            Start();
             break;
         case 4://instrukca
-            cout << "instrukcja";
+            cout << "Instrukcja\n";
             cout << "Walet, Dama, Król – 10 punktów As – 1 lub 11 punktów, w zale¿noœci od tego, która opcja jest korzystniejsza dla gracza";
             cout << "Wiêc dla u³atwienia te karty bêd¹ pokazywaæ siê w ten sposób";
             //ToDo.2
+            Start();
             break;
         case 5://exit
             cout << "Pa Pa";
@@ -157,4 +162,19 @@ void Rozgrywka::TworzenieTalii() {
         cout << "Wybierz swoja akcje: ";
         cin >> x;
         Menu(x);
+    }
+
+    void Sklep::Zakupy() {
+        cout << "1.Zamaiana punktów 5 na bonus.\n"
+            << "3.Opusc sklep.\n";
+        cout << "Wybierz akcje: ";
+        cin >> x; 
+        switch (x) {
+        case 1:
+            break;
+        case 3:
+            //Menu.Start();
+            break;
+
+        }
     }

@@ -29,8 +29,14 @@ class EkranMenu {
     int x;
 public:
     friend class Rozgrywka;
+    friend class Sklep;
     //friend void RozpoczecieGry();
     void Start();
     void Menu(int x);
 
+};
+class Sklep {
+    int x;
+public:
+    void Zakupy();
 };
