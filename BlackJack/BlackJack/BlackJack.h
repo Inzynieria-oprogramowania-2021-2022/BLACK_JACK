@@ -15,6 +15,7 @@ class Rozgrywka {
     int kolejna;
     bool isAlive = false;
     bool BlackJack = false;
+    
 public:
     friend class EkranMenu;    
     void TworzenieTalii();

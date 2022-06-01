@@ -13,7 +13,7 @@ using namespace std;
 
 int main()
 {
-    srand(time(NULL));
+    //srand(time(NULL));
     EkranMenu  Menu;
     Menu.Start();
 }

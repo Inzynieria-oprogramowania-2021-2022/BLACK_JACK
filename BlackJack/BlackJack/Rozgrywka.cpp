@@ -47,7 +47,7 @@ void Rozgrywka::TworzenieTalii() {
 
     }
     void Rozgrywka :: stand() {
-        Krupier();
+        while (sumaKrupier < 17) Krupier();
         //Sprawdzenie czy krupier ma wiêcej czy nie
         cout << "Karty Krupiera to:";
         for (int i = 0; i < kartaKrupier; i++) {
@@ -63,6 +63,7 @@ void Rozgrywka::TworzenieTalii() {
     }
     void Rozgrywka :: wyswietl() {
         int wybor;
+        EkranMenu M;
         cout << "Twoje Karty to:";
         for (int i = 0; i < karta; i++) {
             cout << karty[i] << ",";
@@ -79,12 +80,14 @@ void Rozgrywka::TworzenieTalii() {
             else cout << "Jesli to widzisz to wystapi³ jakis problem, proszê o kontakt z supportem";
         }
         else if (suma == 21) {
-            cout << "\nYou've got Blackjack!";
+            cout << "\nYou've got Blackjack!\n";
             BlackJack = true;
+            M.Start();
         }
         else {
-            cout << "\nYou're out of the game!";
-            isAlive = false;
+            cout << "\nYou're out of the game!\n";
+            isAlive = false;            
+            M.Start();
         }
     }
     void Rozgrywka::RozpoczecieGry() {
@@ -173,7 +176,8 @@ void Rozgrywka::TworzenieTalii() {
         case 1:
             break;
         case 3:
-            //Menu.Start();
+            EkranMenu Menu;
+            Menu.Start();
             break;
 
         }
