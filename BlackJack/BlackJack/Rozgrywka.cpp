@@ -54,7 +54,7 @@ void Rozgrywka::TworzenieTalii() {
             cout << kartyKrupiera[i] << ",";
         }
         cout << "\nSuma: " << sumaKrupier;
-        if (suma >= sumaKrupier) cout << "\nWygrales!"<<endl;
+        if (suma >= sumaKrupier) cout << "\nWygrales!" << endl; 
         else if(sumaKrupier > 21) cout << "\nWygrales!" << endl;
         else cout<<"\nPrzegrales, sprobuj kolejny raz"<<endl;
         EkranMenu M;
@@ -82,6 +82,8 @@ void Rozgrywka::TworzenieTalii() {
         else if (suma == 21) {
             cout << "\nYou've got Blackjack!\n";
             BlackJack = true;
+            Konto G;
+            G.zdobyte();
             M.Start();
         }
         else {
@@ -181,4 +183,8 @@ void Rozgrywka::TworzenieTalii() {
             break;
 
         }
+    }
+    int Konto::zdobyte() {
+        punkty++;
+        return punkty;
     }

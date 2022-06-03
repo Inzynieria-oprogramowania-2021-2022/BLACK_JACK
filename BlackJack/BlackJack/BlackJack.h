@@ -14,7 +14,7 @@ class Rozgrywka {
     int kartaKrupier;
     int kolejna;
     bool isAlive = false;
-    bool BlackJack = false;
+    bool BlackJack = false;    
     
 public:
     friend class EkranMenu;    
@@ -40,4 +40,9 @@ class Sklep {
     int x;
 public:
     void Zakupy();
+};
+class Konto {
+public:
+    int punkty;
+    int zdobyte();
 };
