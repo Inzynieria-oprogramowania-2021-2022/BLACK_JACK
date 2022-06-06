@@ -1,7 +1,7 @@
 #include "EkranMenu.h"
 
 
-int EkranMenu::Menu(int x) {
+/*int EkranMenu::Menu(int x) {
     switch (x)  {
     case 1://funkcja gry
         return 1;
@@ -24,7 +24,7 @@ int EkranMenu::Menu(int x) {
         return 6;
     }
     cin >> x;
-}
+}*/
 
 
 Stany EkranMenu::Wykonuj() {

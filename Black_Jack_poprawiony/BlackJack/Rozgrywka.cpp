@@ -14,8 +14,8 @@ Stany Rozgrywka::Wykonuj() {
     cout << "Rozgrywka\n";
     Gracz.zaladuj();
     RozpoczecieGry();
-
     Gracz.zapisz();
+    cout << "\n";
     return Stany::Menu;
 }
 
@@ -72,8 +72,10 @@ void Rozgrywka::Stand() {
     cout << "\nSuma: " << sumaKrupier;
     if (suma >= sumaKrupier) {
         cout << "\nWygrales!" << endl;
+        Gracz.zwiekszPunkty();
     } else if (sumaKrupier > 21) {
         cout << "\nWygrales!" << endl;
+        Gracz.zwiekszPunkty();
     } else {
         cout << "\nPrzegrales, sprobuj kolejny raz" << endl;
     }

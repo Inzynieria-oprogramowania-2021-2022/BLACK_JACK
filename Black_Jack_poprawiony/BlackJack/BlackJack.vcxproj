@@ -140,19 +140,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BlackJack.cpp" />
+    <ClCompile Include="Credits.cpp" />
     <ClCompile Include="EkranMenu.cpp" />
     <ClCompile Include="Konto.cpp" />
     <ClCompile Include="Rozgrywka.cpp" />
     <ClCompile Include="Sklep.cpp" />
     <ClCompile Include="Stan.cpp" />
+    <ClCompile Include="Support.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BlackJack.h" />
+    <ClInclude Include="Credits.h" />
     <ClInclude Include="EkranMenu.h" />
     <ClInclude Include="Konto.h" />
     <ClInclude Include="Rozgrywka.h" />
     <ClInclude Include="Sklep.h" />
     <ClInclude Include="Stan.h" />
+    <ClInclude Include="Support.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

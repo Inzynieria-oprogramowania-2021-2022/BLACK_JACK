@@ -8,6 +8,8 @@
 #include "Konto.h"
 #include "Stan.h"
 #include "EkranMenu.h"
+#include "Support.h"
+#include "Credits.h"
 
 using namespace std;
 /*ToDo:
@@ -30,9 +32,9 @@ int main() {
         case Stany::Gra:
             stan = new Rozgrywka; break;
         case Stany::Support:
-            stan = nullptr; break;
+            stan = new Support; break;
         case Stany::Credits:
-            stan = nullptr; break;
+            stan = new Credits; break;
         case Stany::Koniec:
             stan = nullptr; break;
         default:
