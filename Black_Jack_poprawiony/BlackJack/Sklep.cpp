@@ -3,12 +3,21 @@
 using namespace std;
 
 void Sklep::Zakupy() {
-
+    if (Gracz.getPunkty() >= 5) {
+        int x = Gracz.getPunkty();
+        x -= 5;
+        Gracz.setPunkty(x);
+        Gracz.zapisz();
+    }
+    else
+        cout << "Masz za malo punktow\n";
 }
 
 
 Stany Sklep::Wykonuj() {
-    cout << "Sklep\n";
+    Gracz.zaladuj();
+    cout << "Sklep\n" << 
+    "Twoje punkty: " << Gracz.getPunkty()<< "\n";
     cout << "1. Zamiana 5 punktow na bonus.\n"
          << "3. Opusc sklep.\n";
     cout << "Wybierz akcje: ";
