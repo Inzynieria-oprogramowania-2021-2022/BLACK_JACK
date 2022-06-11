@@ -1,0 +1,27 @@
+Decyzja o grze
+
+1. Gracza sprawdza sumę jaką uzyskał na kartach
+2. Na kartach znajduje się łączna suma 21 pkt - oznacza to wygraną
+3. Gracz nie dobiera kart czyli pasuje
+
+Alternatywna sytuacja
+1. Gracza sprawdza sumę jaką uzyskał na kartach
+2. Na kartach znajduję się łączna suma mniejsza niż 21 pkt - oznacza to że gracz jeszcze nie wygrał - czyli musi dobrać kolejną kartę
+
+Sprawdzenie wyniku
+
+1. Gracz sprawdza sumę jaką uzyskał na kartach.
+2. uzyskanie 1 asa i waleta lub króla lub damy oznacza automatyczna wygrana.
+
+Alternatywna sytuacja
+1. Gracz sprawdza sumę jaką uzyskał na kartach.
+2. uzyskanie przykładowo 1 ósemki i waleta lub króla lub damy nieoznacza jeszcze wygranej
+
+Sprawdzenie wyniku
+
+1. Gracz sprawdza sumę jaką uzyskał na kartach.
+2. uzyskanie 1 asa i waleta lub króla lub damy oznacza automatyczna wygrana.
+
+Alternatywna sytuacja
+1. Gracz sprawdza sumę jaką uzyskał na kartach.
+2. uzyskanie przykładowo 1 ósemki i waleta lub króla lub damy nieoznacza jeszcze wygranej
